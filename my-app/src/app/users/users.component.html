@@ -1,0 +1,17 @@
+<div class="my-2">
+<label>User Name</label>
+<input type="text" class="form-control"(input)="onUpdateUser($event)" />
+<input type="text" class="form-control"[(ngModel)]="userName" />
+<div>{{ userName }} </div>
+</div>
+<button class='btn btn-primary'[disabled]='!allowNewUser' (click)="changeuserCreatedstatus()">Add User</button>
+<!-- this is property binding -->
+<!-- <div>{{ allowNewUser}} </div>   -->
+<!-- this is event binding -->
+<!-- <div>{{ userCreatedstatus }} </div> -->
+<div *ngIf="isUserCreated; else noUser">User is created and the username is {{ userName }} </div>
+<ng-template #noUser><div>no user is created</div></ng-template>
+<app-user *ngFor="let user of users"></app-user>
+<app-user></app-user>
+<app-user></app-user>
+
