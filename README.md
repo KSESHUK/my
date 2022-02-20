@@ -1,2 +1,3 @@
 # my
-my first repository
+my first repository created by sample
+
